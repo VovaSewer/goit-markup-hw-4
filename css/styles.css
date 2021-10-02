@@ -30,10 +30,6 @@ ul {
   padding: 0;
 }
 
-/* .img {
- display: block;
-} */
-
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background-color);
@@ -114,6 +110,8 @@ body {
 
 .header-mail-link,
 .header-tel-link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -139,12 +137,25 @@ body {
   margin-left: 50px;
 }
 
+.header-mail-icon,
+.header-tel-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 /* --------------HERO-------------- */
 
 .hero {
-  background-color: #2f303a;
+  background-color:#2f303a;
+  background-image: url(../images/herobcg.png),url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
@@ -197,6 +208,17 @@ body {
 .about-item {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
+}
+
+.about-icon-bcg{
+  width: 270px;
+  height: 120px;
+  display: flex;
+  background: #F5F4FA;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .about-title {
@@ -284,6 +306,7 @@ body {
   margin-left: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  background:var(--background-color);
 }
 
 .team-worker {
@@ -291,9 +314,93 @@ body {
   padding-bottom: 30px;
 }
 
+.team-icon-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.team-icon-item:not(:first-child) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.team-icon-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.team-icon-svg{
+  fill:#AFB1B8; 
+}
+
+.team-icon-link:hover .team-icon-svg{
+  fill:var(--background-color); 
+}
+
+.team-icon-link:hover{
+  background-color: var(--accent-color);
+}
+
+/* --------------OUR CLIENTS-------------*/
+
+.clients{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-title{
+  font-weight: 700;
+font-size: 36px;
+line-height: 1.17;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--primary-title-color);
+margin-bottom: 50px;
+}
+
+.clients-list{
+  display: flex;
+  justify-content: center;
+  margin-left: -30px;
+}
+
+.clients-link{
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #AFB1B8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-left: 30px;
+  cursor: pointer;
+}  
+
+.clients-icon{
+fill: #AFB1B8;
+}
+
+.clients-link:hover .clients-icon {
+  fill:var(--accent-color);
+} 
+
+.clients-link:hover{
+  border-color: var(--accent-color);
+}
+
 /* --------------FOOTER-------------- */
 
-.footer {
+.footer-container {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -331,6 +438,65 @@ body {
 
 .footer-mail {
   margin-bottom: 9px;
+}
+
+.footer-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.container-footer-box{
+  margin-right: 70px;
+}
+
+.footer-title{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color:var(--background-color);
+  margin-bottom: 20px;
+}
+
+.footer-icon-list {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.footer-icon-item:not(:first-child) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.footer-icon-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon-svg{
+  fill:var(--background-color); 
+}
+
+.footer-icon-link:hover .footer-icon-svg{
+  fill:var(--background-color); 
+}
+
+.footer-icon-link:hover{
+  background-color: var(--accent-color);
+}
+
+.footer-icon{
+  padding-top: 12px;
 }
 
 /* --------------PORTFOLIO-------------- */
